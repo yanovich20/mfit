@@ -21,7 +21,7 @@
         <tr>
             <td>{{ $order->id }}</td>
             <td> {{$order->created_at}}</a></td>
-            <td><a href="{{ route('orders.show', $order['id']) }}">{{ $order->fio }}</a></td>
+            <td><a href="{{ route('orders.show', $order->id) }}">{{ $order->fio }}</a></td>
             <td>{{ $order->status }}</td>
             <td>{{ $order->summ }}</td>
              <td>

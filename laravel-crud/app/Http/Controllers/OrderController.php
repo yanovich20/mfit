@@ -14,8 +14,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $orders = Order::orderBy('id')->select("created_at","fio","product_id","summ","status")->get();
-        return view('orders.index',compact('orders'));
+        return view('orders.index',['orders'=>Order::select("id","created_at","fio","product_id","summ","status")->get()]);
     }
 
     /**
